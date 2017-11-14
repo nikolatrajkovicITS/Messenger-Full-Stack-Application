@@ -1,13 +1,13 @@
-<article class="panel panel-default">
+<article class="panel panel-default" [ngStyle]="{backgroundColor: color}" (mouseenter)="color = 'green'">
     <div class="panel-body">
         {{ message.content }}
     </div>
-    <footer>
+    <footer class="panel-fotter">
         <div class="author">
             {{ message.author }}
         </div>
         <div class="config">
-            <a href="#">Edit</a>
+            <a href="#" (click)="onEdit()">Edit</a>
             <a href="#">Delete</a>
         </div>
     </footer>
