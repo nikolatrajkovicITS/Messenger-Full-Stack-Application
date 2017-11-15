@@ -1,11 +1,11 @@
-import { Message } from './message.model';
+import { Message } from "./message.model";
 
 export class MessageService {
-    messages: Message[] = [];
+    private messages: Message[] = [];
 
     addMessage(message: Message) {
         this.messages.push(message);
-        console.log(message);
+        console.log(this.messages);
     }
 
     getMessages() {
@@ -13,6 +13,6 @@ export class MessageService {
     }
 
     deleteMessage(message: Message) {
-        this.messages.indexOf((message), 1);
+        this.messages.splice(this.messages.indexOf(message), 1);
     }
 }
